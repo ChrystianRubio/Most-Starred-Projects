@@ -38,6 +38,6 @@ chart = pygal.Bar(my_config, style=my_style)
 chart.title = "Most-Starred Python Projects on GitHub"
 chart.x_labels = names
 
+
 chart.add('', stars)
 chart.render_to_file('python_repos.svg')
-
