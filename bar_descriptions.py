@@ -25,7 +25,6 @@ plot_dicts = [
                 {'value': 121906, 'label': 'httpie'},
                 {'value': 141109, 'label': 'django'},
                 {'value': 136657, 'label': 'flask'},
-
 ]
 
 
