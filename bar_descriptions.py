@@ -16,7 +16,7 @@ repo_dicts = results['items']
 my_style = LS('#333366', base_style=LCS)
 
 
-chart = pygal.Bar(style=my_style, x_label_rotation=45,show_legend=False)
+chart = pygal.Bar(style=my_style, x_label_rotation=45,show_legend=False,show_y_guides = False)
 
 chart.title = "Python Projects"
 chart.x_labels = ['httpie', 'django', 'flask']
