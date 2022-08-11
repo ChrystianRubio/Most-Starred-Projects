@@ -4,7 +4,7 @@ from pygal.style import LightColorizedStyle as LCS, LightenStyle as LS
 
 # api call
 
-url = 'https://api.github.com/search/repositories?q=language:python&sort=stars'
+url = 'https://api.github.com/search/repositories?q=language:python&sort=star'
 doing = requests.get(url)
 
 results = doing.json()

@@ -2,9 +2,15 @@ import requests
 import pygal
 from pygal.style import LightColorizedStyle as LCS, LightenStyle as LS
 
+
+# user choose the language 
+userL = str(input('Language: ')).lower()
+
+
+
 # api call
 
-url = 'https://api.github.com/search/repositories?q=language:python&sort=starred_url'
+url = f'https://api.github.com/search/repositories?q=language:{userL}&sort=star'
 doing = requests.get(url)
 
 results = doing.json()
@@ -42,9 +48,9 @@ my_config.width = 1000
 
 chart = pygal.Bar(my_config, style=my_style)
 
-chart.title = "Most-Starred Python Projects on GitHub"
+chart.title = f"Most-Starred {userL.capitalize()} Projects on GitHub"
 chart.x_labels = names
 
 
 chart.add('', plot_dicts)
-chart.render_to_file('python_repos.svg')
+chart.render_to_file(f'{userL}_repos.svg')
